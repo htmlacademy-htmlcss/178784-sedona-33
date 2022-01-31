@@ -1,0 +1,14 @@
+.welcome-sedona {
+    background-image: url('../images/index-background.jpg');
+    background-repeat: no-repeat;
+}
+
+.subscription {
+    background-image: url('../images/subsctiption-background.jpg');
+    background-repeat: no-repeat;
+}
+
+.main-inner {
+    background-image: url('../images/catalog-background.jpg');
+    background-repeat: no-repeat;
+}
