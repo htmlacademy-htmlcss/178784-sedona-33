@@ -40,7 +40,7 @@
     </nav>
 
   </header>
-  <main class="main-inner">
+  <main class="main-container main-inner">
     <header class="inner-header">
       <h1 class="inner-header-title">Гостиницы Седоны</h1>
       <ul class="breadcrumbs">
@@ -51,7 +51,7 @@
         </li>
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="catalog.html">
-            <span class="visually-hidden">Гостиницы</span>
+            <span>Гостиницы</span>
           </a>
         </li>
       </ul>
@@ -116,8 +116,10 @@
             <input type="number" name="catalot-filter-price-to" value="9000">
           </label>
         </fieldset>
-        <button type="submit" class="button button-blue">Применить</button>
-        <button type="reset" class="catalog-filter-clear-button">Сбросить</button>
+        <div class="catalog-filters-buttons">
+          <button type="submit" class="button button-blue">Применить</button>
+          <button type="reset" class="catalog-filter-clear-button">Сбросить</button>
+        </div>
       </form>
       <section class="catalog-hotels-result-toolbar">
         <h3 class="visually-hidden">Настройки отображения результатов поиска гостиниц</h3>

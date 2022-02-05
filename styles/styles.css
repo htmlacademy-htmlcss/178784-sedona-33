@@ -14,12 +14,24 @@
     font-display: swap;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     font-family: 'PT Sans', sans-serif;
     font-size: 18px;
     line-height: 21px;
     background: #FFFFFF;
     color: #333333;
+}
+
+.visually-hidden {
+    display: none;
 }
 
 .button {
@@ -38,6 +50,35 @@ body {
     background-color: #83B3D3;
 }
 
+.main-container {
+    flex-grow: 1;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.navigation {
+    width: 1060px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.navigation-logo {
+    margin-right: 30px;
+}
+
+.navigation-list {
+    display: flex;
+    justify-content: space-around;
+    width: 345px;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-toolbar {
+    max-width: 300px;
+    margin-left: auto;
+}
+
 .navigation-link {
     font-weight: 700;
     font-size: 20px;
@@ -50,6 +91,10 @@ body {
     color: #FFFFFF;
 }
 
+.inner-header {
+    margin-left: 71px;
+}
+
 .inner-header-title {
     font-weight: 700;
     font-size: 60px;
@@ -60,6 +105,12 @@ body {
 .breadcrumbs-link {
     font-size: 16px;
     color: #FFFFFF;
+}
+
+.catalog-filters {
+    width: 1057px;
+    margin: 0 auto;
+    display: flex;
 }
 
 .catalog-filter-title {
@@ -83,7 +134,13 @@ body {
     line-height: 39px;
     text-transform: uppercase;
     color: #000000;
-    
+    margin-right: auto;
+}
+
+.catalog-hotels-result-toolbar {
+    width: 1057px;
+    margin: 0 auto;
+    display: flex;
 }
 
 .select-control {
@@ -119,9 +176,28 @@ body {
     font-weight: 400;
 }
 
+.hotels {
+    width: 1200px;
+}
+
 .show-more-button {
     font-size: 20px;
     line-height: 26px;
+    width: 620px;
+    margin: 0 auto;
+    display: block;
+}
+
+.pagination {
+    width: 1056px;
+    display: flex;
+    align-items: center;
+
+}
+
+.pagination-list {
+    display: flex;
+    margin-right: auto;
 }
 
 .pagination-item a {
@@ -139,6 +215,14 @@ body {
     background-color: #83B3D3;
     background-size: 1200px 485px;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-sedona-text-img {
+    width: 458px;
 }
 
 .welcome-sedona-about {
@@ -148,15 +232,31 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: #000000;
+    width: 720px;
+}
+
+.advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 }
 
 .advantages-item {
     text-align: center;
+    background: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-without-img {
+    width: 400px;
 }
 
 .advantages-reasons {
     font-size: 22px;
     line-height: 36px;
+    width: 720px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .advantages-item-title {
@@ -180,12 +280,18 @@ body {
     color: #FFFFFF;
 }
 
-.advantages-item {
-    background: rgba(131, 179, 211, 0.12);
-}
 
 .advantages-item-with-img {
     background: #83B3D3;
+    display: flex;
+}
+
+.advantages-item-city-img {
+    width: 800px;
+}
+
+.advantages-devol-bridge {
+    flex-direction: row-reverse;
 }
 
 .advantages-item-meal {
@@ -194,6 +300,13 @@ body {
 
 .advantages-item-beauty-road {
     background: rgba(131, 179, 211, 0.2);
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .search-interest {
@@ -209,12 +322,14 @@ body {
     font-size: 22px;
     line-height: 26px;
     text-align: center;
+    width: 720px;
 }
 
 .search-button {
     font-weight: 700;
     font-size: 20px;
     line-height: 36px;
+    width: 575px;
 }
 
 .subscription {
@@ -224,10 +339,15 @@ body {
     background-repeat: no-repeat;
     text-align: center;
     color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .catalog-subscription {
     color: #000000;
+    
 }
 
 .subscription-title {
@@ -240,11 +360,17 @@ body {
 .subscription-description {
     font-size: 22px;
     line-height: 26px;
+    width: 720px;
+}
+
+.subscription-form {
+    width: 800px;
 }
 
 .subscription-button {
     font-size: 20px;
     line-height: 26px;
+    width: 200px;
 }
 
 .footer-contact-phone {
@@ -260,4 +386,26 @@ body {
     background-color: #83B3D3;
     background-size: 1200px 408px;  
     background-repeat: no-repeat;
+}
+
+.page-footer {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.footer-social-networks-list {
+    width: 107px;
+    margin-left: 72px;
+    display: flex;
+}
+
+.footer-contacts {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.footer-htmlacademy-logo {
+    width: 115px;
+    margin-right: 72px;
 }
