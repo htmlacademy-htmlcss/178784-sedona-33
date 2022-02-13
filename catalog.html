@@ -27,39 +27,41 @@
         </li>
       </ul>
       <div class="navigation-toolbar">
-        <a class="navigation-link" href="#">
-          <img class="navigation-search-icon" src="images/search.svg" width="18" height="18" alt="Лупа">
-          <span class="visually-hidden">Поиск</span>
-        </a>
-        <a class="navigation-link navigation-like" href="#">
-          <img class="navigation-like-icon" src="images/favorite.svg" width="18" height="17" alt="Лупа">
-          <span class="visually-hidden">Поставить лайк</span>
-        </a>
-        <a class="navigation-link button want-here-button" href="#">Хочу сюда</a>
+        <ul class="navigation-toolbar-list">
+          <a class="navigation-link" href="#">
+            <img class="navigation-search-icon" src="images/search.svg" width="18" height="18" alt="Лупа">
+            <span class="visually-hidden">Поиск</span>
+          </a>
+          <a class="navigation-link navigation-like" href="#">
+            <img class="navigation-like-icon" src="images/favorite.svg" width="18" height="17" alt="Лупа">
+            <span class="visually-hidden">Поставить лайк</span>
+          </a>
+        </ul>
+        
+        <a class="button want-here-button" href="#">Хочу сюда</a>
       </div>
     </nav>
 
   </header>
   <main class="main-container main-inner">
-    <header class="inner-header">
-      <h1 class="inner-header-title">Гостиницы Седоны</h1>
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link" href="index.html">
-            <span class="visually-hidden">Главная страница</span>
-          </a>
-        </li>
-        <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link" href="catalog.html">
-            <span>Гостиницы</span>
-          </a>
-        </li>
-      </ul>
-    </header>
-    <section class="catalog-hotels">
-      <h2 class="visually-hidden">Список гостиниц Седоны с фильтрами</h2>
+    <div class="inner-header-with-filters">
+      <header class="inner-header">
+        <h1 class="inner-header-title">Гостиницы Седоны</h1>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="index.html">
+              <span class="visually-hidden">Главная страница</span>
+            </a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="catalog.html">
+              <span>Гостиницы</span>
+            </a>
+          </li>
+        </ul>
+      </header>
       <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="catalog-filter-group">
+        <fieldset class="catalog-filter-group catalog-filter-group-infrastructure">
           <legend class="catalog-filter-title">Инфраструктура:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
@@ -82,7 +84,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="catalog-filter-group">
+        <fieldset class="catalog-filter-group catalog-filter-group-house-type">
           <legend class="catalog-filter-title">Тип жилья:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
@@ -105,7 +107,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="catalog-filter-group">
+        <fieldset class="catalog-filter-group catalog-filter-group-cost">
           <legend class="catalog-filter-title">Стоимость, ₽:</legend>
           <label class="control">
             от
@@ -117,10 +119,13 @@
           </label>
         </fieldset>
         <div class="catalog-filters-buttons">
-          <button type="submit" class="button button-blue">Применить</button>
-          <button type="reset" class="catalog-filter-clear-button">Сбросить</button>
+          <button type="submit" class="button button-blue catalog-filter-button">Применить</button>
+          <button type="reset" class="catalog-filter-button catalog-filter-clear-button">Сбросить</button>
         </div>
       </form>
+    </div>
+    <section class="catalog-hotels">
+      <h2 class="visually-hidden">Список гостиниц Седоны</h2>
       <section class="catalog-hotels-result-toolbar">
         <h3 class="visually-hidden">Настройки отображения результатов поиска гостиниц</h3>
         <div class="catalog-hotels-result-count">
@@ -137,7 +142,7 @@
         </div>
   
         <div class="catalog-view-type">
-          <a class="catalog-view-type-button" href="#">
+          <a class="catalog-view-type-button catalog-view-type-button-selected" href="#">
             <img class="catalog-view-type-icon" src="images/mode-tile.svg" width="16" height="14" alt="Иконка выбора отображения в режиме плиток">
             <span class="visually-hidden">Показать карточки</span>
           </a>
@@ -153,7 +158,7 @@
   
       </section>
       
-      <section>
+      <section class="catalog-hotels-results">
         <h3 class="visually-hidden">Результаты поиска гостиниц</h3>
         <div class="hotels">
           <ul class="hotels-list">
@@ -226,7 +231,9 @@
               </div>
             </li>
           </ul>
-          <button class="button button-blue show-more-button">Загрузить еще</button>
+          <div class="show-more-container">
+            <button class="button button-blue show-more-button">Загрузить еще</button>
+          </div>
         </div>
         <div class="pagination">
           <ul class="pagination-list">
@@ -249,13 +256,16 @@
               <a class="button button-blue" href="#">10</a>
             </li>
           </ul>
+          
           <span class="pagination-count-label">Гостиниц на странице:</span>
-          <select class="select-control">
+          <select class="select-control pagination-count-select">
             <option value="4">4</option>
             <option value="10">10</option>
             <option value="10">20</option>
             <option value="10">50</option>
           </select>
+        
+          
         </div>
        
       </section>
@@ -263,7 +273,7 @@
     <section class="subscription catalog-subscription">
       <h2 class="visually-hidden">Подписка на рассылку</h2>
       <p class="subscription-title">Подпишитесь на рассылку</p>
-      <p class="subscription-description">Только полезная информация и никакого спама,
+      <p class="subscription-description">Только полезная информация и никакого спама, <br>
         честное бойскаутское!</p>
 
       <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
