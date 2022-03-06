@@ -44,6 +44,10 @@ body {
   }
 
 .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -53,29 +57,72 @@ body {
     text-decoration: none;
     color: #FFFFFF;
     background-color: #756257;
-    box-sizing: border-box;
     border-radius: 4px;
-    border-width: 1px;
-    border-style: solid;
+    border: none;
+    outline-width: 3px;
+    outline-style: solid;
+    outline-color: transparent;
+    outline-offset: unset;
+}
+
+.button:focus {
+    outline-color: #83B3D3;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:focus, .button:hover, .button:active {
+    background-color: #615048;
 }
 
 .button-blue {
     background-color: #83B3D3;
-    border-color: #83B3D3;
+}
+
+.button-blue:focus {
+    background-color: #68A2CA;
+    outline: 3px solid #756257;
+}
+
+.button-blue:hover, .button-blue:active {
+    background-color: #68A2CA;
+    border: 1px solid #756257;
+}
+
+.button-green {
+    background-color: #7DB54F;
+}
+
+.button-green:focus {
+    outline: 3px solid #756257;
+}
+
+.button-green:focus, .button-green:hover, .button-green:active {
+    background-color: #6C9E42;
+}
+
+.button:active {
+    color: rgba(256, 256, 256, 0.3);
 }
 
 .main-container {
     flex-grow: 1;
-    margin-top: -4px;
 }
 
 .navigation {
+    position: relative;
     width: 1060px;
+    box-sizing: border-box;
+    padding-left: 169px;
     display: flex;
     margin: 0 auto;
 }
 
 .navigation-logo {
+    position: absolute;
+    left: 0;
     margin-right: 30px;
     height: 70px;
     z-index: 1;
@@ -86,7 +133,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     flex-wrap: wrap;
     min-width: 345px;
 }
@@ -108,13 +155,70 @@ body {
 }
 
 .navigation-link {
-    display: block;
-    padding: 20px 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 66px;
+    box-sizing: border-box;
     font-weight: 700;
     font-size: 20px;
     line-height: 26px;
     color: #000000;
     text-decoration: none;
+}
+
+.navigation-link-current {
+    border-bottom: 2px solid #756257;
+}
+
+.navigation-logo:focus, .navigation-link:focus {
+    outline: 3px solid #83B3D3;
+}
+
+.navigation-link:hover {
+    color: #756257;
+}
+
+.navigation-link:active {
+    color: rgba(117, 98, 87, 0.3);
+}
+
+.navigation-like {
+    position: relative;
+}
+
+.navigation-like-counter {
+    display: flex;
+    position: absolute;
+    right: -3px;
+    top: 14px;
+    border: none;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #7DB54F;
+
+}
+
+.navigation-like-counter span {
+    margin: 0 auto;
+    padding-top: 3px;
+    box-sizing: border-box;
+    height: 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.navigation-link:active .navigation-like-counter span {
+    opacity: 0.3;
+}
+
+.navigation-like::after {
+    content: 12;
 }
 
 .navigation-toolbar-list .navigation-link {
@@ -124,15 +228,11 @@ body {
 }
 
 .want-here-button {
-    display: block;
-    box-sizing: border-box;
     align-self: center;
     width: 160px;
     height: 37px;
     line-height: 20px;
     color: #FFFFFF;
-    padding-top: 9px;
-    padding-bottom: 8px;
 }
 
 .inner-header {
@@ -150,14 +250,47 @@ body {
 }
 
 .breadcrumbs {
+    display: flex;
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
 .breadcrumbs-link {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 21px;
     font-size: 16px;
-    color: #FFFFFF;
+    color: #fff;
+    
+}
+
+.breadcrumbs-link:focus {
+    outline: 3px solid #83B3D3;
+    border-radius: 4px;
+}
+
+.breadcrumbs-link:hover, .breadcrumbs-link:active {
+    color: rgba(256, 256, 256, 0.3);
+}
+
+.breadcrumbs-item:not(:last-child) {
+    margin-right: 21px;
+    position: relative;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    width: 4.7px;
+    height: 4.7px;
+    border: 1px solid #fff;
+    border-bottom: none;
+    border-left: none;
+    left: 28px;
+    top: 10px;
+    transform: rotate(45deg);
 }
 
 .catalog-filters {
@@ -280,7 +413,7 @@ body {
     box-sizing: border-box;
     width: 48px;
     height: 48px;
-    border: 2px solid #E6E6E6;
+    outline: 2px solid #E6E6E6;
     border-radius: 4px;
 }
 
@@ -288,9 +421,12 @@ body {
     margin-right: 8px;
 }
 
+.catalog-view-type-button:focus, .catalog-view-type-button:hover {
+    outline-color: #83B3D3;
+}
 
 .catalog-view-type-button-selected {
-    border-color: #000000;
+    outline-color: #000000;
 }
 
 .catalog-hotels-results {
@@ -327,7 +463,26 @@ body {
     width: 300px;
     height: 206px;
     margin: 0;
+}
+
+.hotels-item-link {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 206px;
     margin-bottom: 16px;
+}
+
+.hotels-item-link:focus {
+    outline: 3px solid #83B3D3;
+}
+
+.hotels-item-link:hover {
+    opacity: 0.6;
+}
+
+.hotels-item-link:active {
+    opacity: 0.3;
 }
 
 .hotels-item-name {
@@ -357,19 +512,70 @@ body {
     justify-content: space-between;
 }
 
+.hotel-more-info-btn {
+    width: 133px;
+    height: 37px;
+}
+
+.hotel-to-favorite-btn {
+    width: 140px;
+    height: 37px;
+}
+
 .hotels-rating {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .hotels-rating-value-block {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 160px;
+    height: 37px;
     font-size: 16px;
+    line-height: 21px;
+    text-align: center;
     background: #F2F2F2;
     text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+}
+
+.hotels-rating-stars {
+    display: inline-block;
+    width: 114px;
+    height: 17px;
+    background-image: url('../images/stars5.svg');
+    background-repeat: no-repeat;
+    background-size: 114px 17px;
+}
+
+.four-stars {
+    background-position-x: -23px;
+}
+
+.three-stars {
+    background-position: -46px;
+}
+
+.two-stars {
+    background-position: -69px;
+}
+
+.one-stars {
+    background-position: -92px;
+}
+
+.hotels-rating-lable {
+    display: inline-block;
+    margin-right: 2px;
 }
 
 .hotels-rating-value {
+    display: inline-block;
     font-weight: 400;
 }
 
@@ -411,6 +617,10 @@ body {
     height: 55px;
     font-size: 20px;
     line-height: 26px;
+}
+
+.pagination-item a:hover, .pagination-item a:active {
+    border: none;
 }
 
 .pagination-item:not(:last-child) {
@@ -597,6 +807,7 @@ body {
     font-size: 20px;
     line-height: 36px;
     width: 575px;
+    height: 60px;
     margin-bottom: 93px;
 }
 
@@ -669,14 +880,6 @@ body {
     border-radius: 0 10px 10px 0;
 }
 
-.footer-contact-phone {
-    font-size: 40px;
-    line-height: 40px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #000000;
-}
-
 .inner-header-with-filters {
     height: 408px;
     padding-top: 35px;
@@ -698,10 +901,34 @@ body {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    width: 107px;
-    margin-left: 72px;
+    width: 126px;
+    margin-left: 61px;
     display: flex;
     justify-content: space-between;
+}
+
+.footer-social-networks-item a {
+    display: flex;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #83B3D3;
+}
+
+.footer-social-networks-item a:focus {
+    outline: unset;
+    border: 3px solid #83B3D3;
+    border-radius: 10px;
+}
+
+.footer-social-networks-item a:focus, .footer-social-networks-item:hover a, .footer-social-networks-item:active a {
+    color: #68A2CA;
+}
+
+.footer-social-networks-item a:active {
+    opacity: 0.3;
 }
 
 .footer-contacts {
@@ -709,7 +936,34 @@ body {
     text-align: center;
 }
 
+.footer-contact-phone {
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
 .footer-htmlacademy-logo {
+    display: block;
     width: 115px;
     margin-right: 72px;
+    padding: 10px;
+    color:#000000;
+}
+
+.footer-contact-phone:focus, .footer-htmlacademy-logo:focus {
+    outline: 3px solid #83B3D3;
+    border-radius: 10px;
+}
+
+.footer-contact-phone:hover, .footer-htmlacademy-logo:hover {
+    color: #756257;
+}
+
+.footer-contact-phone:active, .footer-htmlacademy-logo:active {
+    opacity: 0.3;
 }
