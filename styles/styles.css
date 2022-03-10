@@ -1052,20 +1052,19 @@ body {
     justify-content: space-between;
 }
 
-.hotel-more-info-btn {
+.hotel-more-info-button {
     width: 133px;
     height: 37px;
 }
 
-.hotel-to-favorite-btn {
+.hotel-to-favorite-button {
     width: 140px;
     height: 37px;
 }
 
-.hotel-to-favorite-btn:hover, .hotel-to-favorite-btn:active {
+.hotel-to-favorite-button:hover, .hotel-to-favorite-button:active {
     border: 1px solid #756257;
 }
-
 
 .hotels-rating {
     display: flex;
