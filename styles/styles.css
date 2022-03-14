@@ -582,11 +582,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 65px;
   box-sizing: border-box;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+  padding-bottom: 18.5px;
+  padding-top: 18.5px ;
   color: #000000;
   text-decoration: none;
 }
@@ -1272,8 +1273,13 @@ body {
   grid-template-columns: repeat(3, 400px);
 }
 
-.advantages-img {
+.advantages-img-container {
   grid-column: span 2;
+  background-color: #83b3d3;
+}
+
+.advantages-img-container img {
+  display: block;
 }
 
 .advantages-item {
@@ -1409,7 +1415,7 @@ body {
   background-image: url("../images/subsctiption-background.jpg");
   background-color: #83b3d3;
   background-size: 1200px 411px;
-  background-repeat: no-repeat;
+  background-repeat: round;
   text-align: center;
   color: #ffffff;
   display: flex;
@@ -1417,7 +1423,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   box-sizing: border-box;
-  height: 411px;
+  min-height: 411px;
   padding-top: 94px;
 }
 
