@@ -366,7 +366,6 @@ body {
   padding-left: 19px;
 }
 
-
 .modal-date-input .control-date-text:hover {
   background-color: #e6e6e6;
 }
@@ -1178,7 +1177,6 @@ body {
   margin: 0 auto;
   font-size: 20px;
   line-height: 26px;
-  margin-left: -1px;
 }
 
 .pagination {
@@ -1189,7 +1187,7 @@ body {
 
 .pagination-list {
   list-style-type: none;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0;
   padding: 0;
   display: flex;
@@ -1225,6 +1223,7 @@ body {
 .pagination-count-label {
   display: inline-block;
   margin-right: 51px;
+  max-width: 300px;
 }
 
 .pagination-count-select {
@@ -1278,7 +1277,9 @@ body {
 }
 
 .advantages-item {
-  height: 384px;
+  box-sizing: border-box;
+  min-height: 384px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1301,20 +1302,20 @@ body {
 }
 
 .advantages-item-icon-home {
-  margin-top: 89px;
+  margin-top: 69px;
 }
 
 .advantages-item-icon-meal {
-  margin-top: 91px;
+  margin-top: 71px;
 }
 
 .advantages-item-icon-souvenir {
-  margin-top: 85px;
+  margin-top: 65px;
 }
 
 .advantages-item-title {
   margin: 0;
-  margin-top: 97px;
+  margin-top: 77px;
   margin-bottom: 29px;
   font-weight: 700;
   font-size: 24px;
@@ -1487,7 +1488,7 @@ body {
 .subscription-button {
   font-size: 20px;
   line-height: 26px;
-  height: 60px;
+  min-height: 60px;
   width: 200px;
   border-radius: 0 10px 10px 0;
 }
