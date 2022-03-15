@@ -374,7 +374,7 @@ body {
   outline: 3px solid #83b3d3;
 }
 
-.modal-date-input .control-input:focus .control-date-text {
+.control-input[type="date"]:focus + .control-date-text {
   background-color: #e6e6e6;
 }
 
@@ -638,7 +638,7 @@ body {
   color: #ffffff;
 }
 
-.navigation-link:active .navigation-like-counter span {
+.navigation-link:active .navigation-like-counter {
   opacity: 0.3;
 }
 
