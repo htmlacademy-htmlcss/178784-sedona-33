@@ -1168,7 +1168,7 @@ body {
 .show-more-container {
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
-  padding: 27px 0 29px 0;
+  padding: 27px 0 30px 0;
 }
 
 .show-more-button {
@@ -1433,9 +1433,11 @@ body {
   height: unset;
   padding-top: 0;
   margin-bottom: 140px;
+  min-height: unset;
 }
 
 .catalog-subscription .subscription-title {
+  margin-bottom: 45px;
   color: #000000;
 }
 
@@ -1511,6 +1513,8 @@ body {
 
 .page-footer {
   min-height: 120px;
+  margin-top: auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
