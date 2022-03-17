@@ -487,11 +487,11 @@ body {
 .modal-info-details {
   display: none;
   position: absolute;
-  top: 40px;
-  left: -113px;
+  top: 41px;
+  left: -114px;
   box-sizing: border-box;
   width: 256px;
-  padding: 15px 18px 18px 22px;
+  padding: 20px 18px 23px 21px;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -1508,7 +1508,7 @@ body {
   background-image: url("../images/catalog-background.jpg");
   background-color: #83b3d3;
   background-size: 1200px 408px;
-  background-repeat: no-repeat;
+  background-repeat: round;
 }
 
 .page-footer {
