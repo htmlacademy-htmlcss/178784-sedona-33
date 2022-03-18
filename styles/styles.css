@@ -1507,7 +1507,7 @@ body {
   box-sizing: border-box;
   background-image: url("../images/catalog-background.jpg");
   background-color: #83b3d3;
-  background-size: 1200px 408px;
+  background-size: 1200px cover;
   background-repeat: round;
 }
 
