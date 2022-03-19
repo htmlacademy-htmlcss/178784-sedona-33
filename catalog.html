@@ -12,9 +12,9 @@
 <body>
   <header class="page-header">
     <nav class="navigation">
-      <a class="navigation-logo" href="">
+      <a class="navigation-logo" href="index.html">
         <img class="page-header-logo" src="images/logo.png" width="139" height="70"
-          alt="Логотип сайта для поиска гостиниц в городе Седона в Аризоне">
+          alt="Логотип сайта для поиска гостиниц в городе Седона в Аризоне.">
       </a>
       <ul class="navigation-list">
         <li class="navigation-item">
@@ -24,7 +24,7 @@
           <a class="navigation-link" href="about.html">О Седоне</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+          <a class="navigation-link navigation-link-current">Гостиницы</a>
         </li>
       </ul>
       <div class="navigation-toolbar">
@@ -151,8 +151,12 @@
 
           <div class="cost-slider-line">
             <div class="cost-slider-range" style="left: 0; width: 236px;">
-              <button class="cost-toggle cost-toggle-min" type="button"></button>
-              <button class="cost-toggle cost-toggle-max" type="button"></button>
+              <button class="cost-toggle cost-toggle-min" type="button">
+                <span class="visually-hidden">Нижний ползунок слайдера стоимости</span>
+              </button>
+              <button class="cost-toggle cost-toggle-max" type="button">
+                <span class="visually-hidden">Верхний ползунок слайдера стоимости</span>
+              </button>
             </div>
           </div>
 
@@ -175,31 +179,33 @@
           <span class="catalog-hotels-result-value">38</span>
         </div>
 
-        <div class="select catalog-sort">
+        <section class="select catalog-sort">
+          <h4 class="visually-hidden">Выбор способа сортировки</h4>
           <select class="select-control">
             <option value="cheep">Сначала дешёвое</option>
             <option value="popular">Сначала популярное</option>
             <option value="expensive">Сначала дорогое</option>
           </select>
-        </div>
+        </section>
 
-        <div class="catalog-view-type">
+        <section class="catalog-view-type">
+          <h4 class="visually-hidden">Выбор способа отображения карточек</h4>
           <a class="catalog-view-type-button catalog-view-type-button-selected" href="#">
             <img class="catalog-view-type-icon" src="images/mode-tile.svg" width="16" height="14"
-              alt="Иконка выбора отображения в режиме плиток">
+              alt="Иконка выбора отображения в режиме плиток.">
             <span class="visually-hidden">Показать карточки</span>
           </a>
           <a class="catalog-view-type-button" href="#">
             <img class="catalog-view-type-icon" src="images/mode-slideshow.svg" width="16" height="14"
-              alt="Иконка выбора отображения в режиме слайдшоу">
+              alt="Иконка выбора отображения в режиме слайдшоу.">
             <span class="visually-hidden">Показать по одной</span>
           </a>
           <a class="catalog-view-type-button" href="#">
             <img class="catalog-view-type-icon" src="images/mode-list.svg" width="16" height="14"
-              alt="Иконка выбора отображения в режиме списка">
+              alt="Иконка выбора отображения в режиме списка.">
             <span class="visually-hidden">Показать список</span>
           </a>
-        </div>
+        </section>
 
       </section>
 
@@ -210,7 +216,7 @@
             <li class="hotels-item">
               <a class="hotels-item-link" href="#">
                 <img class="hotels-item-img" src="images/hotel-1.jpg" width="300" height="206"
-                  alt="Гостиница Amara Resort & Spa">
+                  alt="Гостиница Amara Resort & Spa.">
               </a>
               <h4 class="hotels-item-name">Amara Resort & Spa</h4>
               <p class="hotels-item-price">
@@ -223,10 +229,10 @@
               </div>
               <div class="hotels-rating">
                 <div>
-                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы" width="18" height="17">
-                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы" width="18" height="17">
-                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы" width="18" height="17">
-                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы" width="18" height="17">
+                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы." width="18" height="17">
+                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы." width="18" height="17">
+                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы." width="18" height="17">
+                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы." width="18" height="17">
                 </div>
                 <div class="hotels-rating-value-block">
                   <span class="hotels-rating-lable">Рейтинг: <b class="hotels-rating-value">8,5</b></span>
@@ -249,9 +255,9 @@
               </div>
               <div class="hotels-rating">
                 <div>
-                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы" width="18" height="17">
-                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы" width="18" height="17">
-                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы" width="18" height="17">
+                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы." width="18" height="17">
+                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы." width="18" height="17">
+                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы." width="18" height="17">
                 </div>
                 <div class="hotels-rating-value-block">
                   <span class="hotels-rating-lable">Рейтинг: <b class="hotels-rating-value">8,9</b></span>
@@ -274,8 +280,8 @@
               </div>
               <div class="hotels-rating">
                 <div>
-                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы" width="18" height="17">
-                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы" width="18" height="17">
+                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы." width="18" height="17">
+                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы." width="18" height="17">
                 </div>
                 <div class="hotels-rating-value-block">
                   <span class="hotels-rating-lable">Рейтинг: <b class="hotels-rating-value">9,2</b></span>
@@ -298,8 +304,8 @@
               </div>
               <div class="hotels-rating">
                 <div>
-                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы" width="18" height="17">
-                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы" width="18" height="17">
+                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы." width="18" height="17">
+                  <img class="hotels-rating-star" src="images/star.svg" alt="Звезда гостиницы." width="18" height="17">
                 </div>
                 <div class="hotels-rating-value-block">
                   <span class="hotels-rating-lable">Рейтинг: <b class="hotels-rating-value">9,2</b></span>
@@ -341,7 +347,6 @@
               <option value="10">20</option>
               <option value="10">50</option>
             </select>
-
           </div>
         </div>
 
@@ -436,6 +441,7 @@
         <path
           d="M109.4 27.0001L105.8 18.1001H103.6L108.4 29.7001C108.1 30.6001 107.7 30.9001 106.7 30.9001H104.2V32.9001H106.7C108.5 32.9001 109.5 32.1001 110.2 30.3001L114.9 18.1001H112.8L109.4 27.0001Z" />
       </svg>
+      <span class="visually-hidden">Ссылка на сайт htmlacademy</span>
     </a>
   </footer>
 

@@ -12,13 +12,13 @@
 <body>
   <header class="page-header">
     <nav class="navigation">
-      <a class="navigation-logo" href="">
+      <a class="navigation-logo">
         <img class="page-header-logo" src="images/logo.png" width="139" height="70"
-          alt="Логотип сайта для поиска гостиниц в городе Седона в Аризоне">
+          alt="Логотип сайта для поиска гостиниц в городе Седона в Аризоне.">
       </a>
       <ul class="navigation-list">
         <li class="navigation-item">
-          <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
+          <a class="navigation-link navigation-link-current">Главная</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="about.html">О Седоне</a>
@@ -64,7 +64,7 @@
       <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
       <div class="welcome-sedona-img-container">
         <img class="welcome-sedona-text-img" src="images/welcome.svg" width="458" height="352"
-          alt="Текст приглашения в Седону">
+          alt="Текст приглашения в Седону.">
       </div>
 
       <p class="welcome-sedona-about">Седона — небольшой городок в Аризоне,
@@ -85,32 +85,32 @@
         </div>
 
         <div class="advantages-img-container">
-          <img src="images/advantage-1.jpg" width="800" height="384" alt="Здание в городе Седона">
+          <img src="images/advantage-1.jpg" width="800" height="384" alt="Здание в городе Седона.">
         </div>
 
         <div class="advantages-item advantages-details">
           <img class="advantages-item-icon advantages-item-icon-home" src="images/advantage-house-icon.svg" width="75"
-            height="72" alt="Значек дома">
+            height="72" alt="Значек дома.">
           <p class="advantages-item-title">Жилье</p>
           <p class="advantages-item-description">Рекомендуем пожить в&nbsp;настоящем мотеле,<br>всё как в кино!</p>
         </div>
 
         <div class="advantages-item advantages-details advantages-item-meal">
           <img class="advantages-item-icon advantages-item-icon-meal" src="images/advantage-meal-icon.svg" width="74"
-            height="70" alt="Значек гамбургера">
+            height="70" alt="Значек гамбургера.">
           <p class="advantages-item-title">Еда</p>
           <p class="advantages-item-description">Всегда заказывайте<br>топовый фирменный бургер, вы не разочаруетесь!</p>
         </div>
 
         <div class="advantages-item advantages-details ">
           <img class="advantages-item-icon advantages-item-icon-souvenir" src="images/advantage-souvenir-icon.svg" width="64"
-            height="76" alt="Значек подарочной коробки">
+            height="76" alt="Значек подарочной коробки.">
           <p class="advantages-item-title">Сувениры</p>
           <p class="advantages-item-description">Не только китайского,<br>но и настоящего местного производства!</p>
         </div>
 
         <div class="advantages-img-container">
-          <img src="images/advantage-2.jpg" width="800" height="384" alt="Здание в городе Седона">
+          <img src="images/advantage-2.jpg" width="800" height="384" alt="Здание в городе Седона.">
         </div>
 
         <div class="advantages-item advantages-item-near-img">
@@ -246,9 +246,10 @@
         <path
           d="M109.4 27.0001L105.8 18.1001H103.6L108.4 29.7001C108.1 30.6001 107.7 30.9001 106.7 30.9001H104.2V32.9001H106.7C108.5 32.9001 109.5 32.1001 110.2 30.3001L114.9 18.1001H112.8L109.4 27.0001Z" />
       </svg>
+      <span class="visually-hidden">Ссылка на сайт htmlacademy</span>
     </a>
   </footer>
-  <div class="modal-container modal-container-closed">
+  <div class="modal-container">
     <div class="modal modal-search">
       <button class="modal-close-button" type="button">
         <svg width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -261,15 +262,13 @@
         <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="control-label" for="search-date-from">Дата заезда:</label>
           <div class="modal-date-input">
-            <input class="control-input" id="search-date-from" name="search-date-from" type="date" value="2020-04-27">
-            <span class="control-date-text">27 апреля 2020</span>
+            <input class="control-input" id="search-date-from" name="search-date-from" type="text" value="27 апреля 2020" required>
             <span class="control-info control-invalid">Мы не можем отправить вас в прошлое</span>
           </div>
 
           <label class="control-label" for="search-date-to">Дата выезда:</label>
           <div class="modal-date-input">
-            <input class="control-input" id="search-date-to" name="search-date-to" type="date" value="2021-09-01">
-            <span class="control-date-text">1 сентября 2021</span>
+            <input class="control-input" id="search-date-to" name="search-date-to" type="text" value="1 сентября 2021" required>
             <span class="control-info control-valid">На эти даты есть свободные номера. Пока есть.</span>
           </div>
 
@@ -279,12 +278,14 @@
               <svg width="13" height="1" viewBox="0 0 13 1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0v1h13V0H0Z" />
               </svg>
+              <span class="visually-hidden">Уменьшить значение на 1</span>
             </button>
-            <input class="control-input" id="search-adults" name="search-adults" type="number" value="2">
+            <input class="control-input" id="search-adults" name="search-adults" type="number" value="2" required>
             <button class="modal-number-plus" type="button">
               <svg width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" />
               </svg>
+              <span class="visually-hidden">Увеличить значение на 1</span>
             </button>
           </div>
 
@@ -302,12 +303,14 @@
               <svg width="13" height="1" viewBox="0 0 13 1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0v1h13V0H0Z" />
               </svg>
+              <span class="visually-hidden">Уменьшить значение на 1</span>
             </button>
-            <input class="control-input" id="search-children" name="search-children" type="number" value="1">
+            <input class="control-input" id="search-children" name="search-children" type="number" value="1" required>
             <button class="modal-number-plus" type="button">
               <svg width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" />
               </svg>
+              <span class="visually-hidden">Увеличить значение на 1</span>
             </button>
           </div>
 
